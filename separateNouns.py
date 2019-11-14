@@ -14,7 +14,9 @@ def run(args = sys.argv[1:]):
             if tag not in possible_tags:
                 print("tag not possible: {}".format(tag))
             if tag in noun_tags:
-                noun_file.write(word + "\n")
+                for part in word_tag_list:
+                    noun_file.write(part + " ")
+                noun_file.write("\n")
 
 
 
