@@ -23,5 +23,21 @@ Hindi:
 i-HDTB/hi_hdtb-ud-train.conllu.UPOS.DICT ../data/Hindi/hin-in_web_2015_10K-sentences.txt
 
 # 3. figure out which tags are nouns
+PROPN, NOUN, PRON
+getNounTags.py
+python getNounTags.py RDRPOSTagger/Models/ud-treebanks-v2.4/UD_Spanish-AnCora/es_ancora-ud-train.conllu.UPOS.DICT
+
+# 4. parse out nouns from tagged data
+
+python separateNouns.py RDRPOSTagger/data/German/deu-com_web_2018_10K-sentences.txt.TAGGED RDRPOSTagger/data/German/German_noun_words.txt
+python separateNouns.py RDRPOSTagger/data/Hindi/hin-in_web_2015_10K-sentences.txt.TAGGED RDRPOSTagger/data/Hindi/Hindi_noun_words.txt
+python separateNouns.py RDRPOSTagger/data/Russian/rus-ge_web_2017_10K-sentences.txt.TAGGED RDRPOSTagger/data/Russian/Russian_noun_words.txt
+python separateNouns.py RDRPOSTagger/data/Spanish/spa-ad_web_2017_10K-sentences.txt.TAGGED RDRPOSTagger/data/Spanish/Spanish_noun_words.txt
+python separateNouns.py RDRPOSTagger/data/Arabic/ara-ae_web_2017_10K-sentences.txt.TAGGED RDRPOSTagger/data/Arabic/Arabic_noun_words.txt
+
+# 5. translate nouns
+
+
+
 
 
